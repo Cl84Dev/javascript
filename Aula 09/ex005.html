@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(19, 4, 150);
+            color: white;
+            font: normal 18pt Arial;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg"> Clique em mim</div>
+    <script>
+        /*var p1 = window.document.getElementsByTagName('p')[1] //Número entre colchetes representa o elemento especificado por ordem, começando com 0
+        window.document.write("Está escrito assim: " + p1.innerText)
+        p1.style.color = 'red'
+        var corpo = window.document.body
+        corpo.style.background = "black" //Depois de atribuir uma variável ao elemento, é possível alterá-lo com o DOM
+    
+        var d = window.document.getElementById('msg')// Depois de atribuir um ID ao elemento, é possível acessar o elemento pelo ID.
+
+        d.innerText = "Estou aguardando..."
+        d.style.background = 'green'*/
+        var d = window.document.querySelector('div#msg')
+        d.style.background = 'red'
+        
+
+
+
+    </script>
+
+</body>
+</html>

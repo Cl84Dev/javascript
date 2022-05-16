@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Time</title>
+</head>
+<body>
+
+<p>Digite seu time</p>
+
+    <input type="text" id="time">
+
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    <div id="res">Aqui vai aparecer o resultado</div>
+
+<script>
+    function verificar(){
+        var time = window.document.getElementById('time').value
+        var res1 = window.document.getElementById("res")
+        
+        if(time === 'Flamengo' || time === 'Real Madrid') {
+            res1.innerHTML = `${time} é o maior time do mundo!`
+            document.body.style.background = "red"
+            document.body.style.color = "white"
+        } else {
+            res1.innerHTML = `${time} não vale nada!`
+            document.body.style.background = 'black'
+            document.body.style.color = 'white'
+
+        }
+    }
+   
+
+/* function verificar(){
+
+        var time = window.document.getElementById('time').value
+        //var btime = String(time.value)
+        console.log(typeof time)
+        var res1 = window.document.getElementById("res")
+        var res = time === "Flamengo" || time === "Real Madrid"? "é o maior do mundo!":"não vale nada!"
+        res1.innerHTML = `${time} ${res}`
+        //document.write(`${btime} ${res}`)
+        //window.alert(`${btime} ${res}`)
+    }*/
+
+</script>
+    
+</body>
+</html>
