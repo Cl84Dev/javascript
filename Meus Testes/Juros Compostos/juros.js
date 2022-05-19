@@ -15,7 +15,7 @@ function calcular() {
       document.getElementById('taxaAnual').value = ''
       document.getElementById('res').innerHTML = ''
       document.getElementById('aporteInicial').focus()
-   }
+    }
 
     if(periodo === 1) {
       ano = "ano"
@@ -32,7 +32,7 @@ function calcular() {
     let rendimentoTotal = rendimentoTotalSobreAporteInicial + rendimentoTotalSobreAportesMensais
     let totalInvestido = rendimentoTotal - aporteTotal
     
-    if (aporteInicial == 0 && aporteMensal == 0) {
+    if (aporteInicial === 0 && aporteMensal === 0) {
        window.alert(`Para obter o resultado, você precisa prencher um valor válido de aporte inicial ou aporte mensal, ou ambos.`)
     } else if ( aporteInicial < 0  ) {
        window.alert(`Insira um valor válido para o aporte inicial.`)
