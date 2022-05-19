@@ -33,27 +33,27 @@ function calcular() {
     let totalInvestido = rendimentoTotal - aporteTotal
     
     if (aporteInicial === 0 && aporteMensal === 0) {
-       window.alert(`Para obter o resultado, você precisa prencher um valor válido de aporte inicial ou aporte mensal, ou ambos.`)
+       window.alert(`Insira um valor válido para o aporte inicial ou aporte mensal, ou ambos.`)
     } else if ( aporteInicial < 0  ) {
        window.alert(`Insira um valor válido para o aporte inicial.`)
     } else if ( aporteMensal < 0 ) {
        window.alert(`Insira um valor válido para o aporte mensal.`)
     } else if ( periodo <= 0 ) {
-       window.alert(`Para obter o resultado, você precisa informar um período válido para o seu investimento.`)
+       window.alert(`Insira um período válido para o seu investimento.`)
     } else if ( taxaAnual <= 0 ) {
-       window.alert(`Para obter o resultado, você precisa informar um valor válido para a taxa anual do seu investimento.`)
+       window.alert(`Insira um valor válido para a taxa anual do seu investimento.`)
     } else if ( aporteInicial !=0 && aporteMensal == 0) {
-      res.innerHTML = `<p>Se você fizer um aporte único de ${aporteInicial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} à uma taxa anual de ${taxaAnual}%, ao fim de ${periodo} ${ano} você vai ter acumulado o total de ${rendimentoTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}.</p>
+      res.innerHTML = `<h2>Resultado</h2><p>Se você fizer um aporte único de ${aporteInicial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} à uma taxa anual de ${taxaAnual}%, ao fim de ${periodo} ${ano} você vai ter acumulado o total de ${rendimentoTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}.</p>
       <p>Valor investido: ${aporteInicial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p><p>Valor recebido em juros: ${recebidoEmJurosSobreAporteInicial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p> `
       reset.innerHTML = "Reiniciar Calculadora"
       res.appendChild(reset)
     } else if ( aporteInicial == 0 && aporteMensal != 0 ) {
-      res.innerHTML = `<p>Se você fizer aportes mensais de ${aporteMensal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} à uma taxa anual de ${taxaAnual}%, ao fim de ${periodo} ${ano} você vai ter acumulado o total de ${rendimentoTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}.</p>
+      res.innerHTML = `<h2>Resultado</h2><p>Se você fizer aportes mensais de ${aporteMensal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} à uma taxa anual de ${taxaAnual}%, ao fim de ${periodo} ${ano} você vai ter acumulado o total de ${rendimentoTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}.</p>
       <p>Valor investido: ${totalDeAportesMensais.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p><p>Valor recebido em juros: ${recebidoEmJurosSobreAportesMensais.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>`
       reset.innerHTML = "Reiniciar Calculadora"
       res.appendChild(reset)
     } else {
-      res.innerHTML = `<p>Se você fizer um aporte inicial de ${aporteInicial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} e aportes mensais de ${aporteMensal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} a uma taxa anual de ${taxaAnual}%, ao fim de ${periodo} ${ano} você vai ter acumulado o total de ${rendimentoTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}.</p>
+      res.innerHTML = `<h2>Resultado</h2><p>Se você fizer um aporte inicial de ${aporteInicial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} e aportes mensais de ${aporteMensal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} a uma taxa anual de ${taxaAnual}%, ao fim de ${periodo} ${ano} você vai ter acumulado o total de ${rendimentoTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}.</p>
       <p>Valor investido: ${aporteTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p><p>Valor recebido em juros: ${totalInvestido.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>`
       reset.innerHTML = "Reiniciar Calculadora"
       res.appendChild(reset)
